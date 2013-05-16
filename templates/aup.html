@@ -1,0 +1,31 @@
+<h1>{hdrPageTitle}</h1>
+<p> Here you can have your IP address temporarily
+exempted from the DNSBL scans preventing you from connecting.
+<p>Use this form to get back on AfterNET if you are blocked due to SORBS, NJABL, etc.
+<p>Terms: You must agree to these terms before your
+ip is made exempt:
+<div id="captcha">
+<ul> 
+  <li>You may not participate in any unsolicitized advertizing 
+  of any kind using any afternet resources.</li> 
+  <li>You may not flood, evade bans (channel or network), or evade ignores.</li> 
+  <li>You must follow official instructions from AfterNET administration.</li> 
+</ul>
+</div><br>
+<div id="captcha"><p></p>
+<form action="{__PHP_SELF}" method="post" name="bopm" id="bopm"> 
+  <input type="hidden" name="option" value="com_bopm">
+  <input type="hidden" name="step" value="2"/> 
+  <p> 
+    &nbsp;&nbsp;&nbsp;<input type="radio" name="iagree" value="true" /> 
+    {lblIAcceptAup} <br/> 
+    &nbsp;&nbsp;&nbsp;<input type="radio" name="iagree" value="false" /> 
+    {lblIDoNotAcceptAup}</p> 
+<script type="text/javascript" src="/lib/plugins/exempt/help/helpdocs.js"></script>
+<!-- BEGIN ErrorUsedBlock -->
+<ul>
+  <!-- BEGIN ErrorBlock -->
+  <li class="error" style="color: red; font-weight: bold;">{error}</li>
+  <!-- END ErrorBlock -->
+</ul>
+<!-- END ErrorUsedBlock -->

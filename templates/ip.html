@@ -1,0 +1,26 @@
+<h1>{hdrPageTitle}</h1>
+<p> Here you can have your IP address temporarily
+exempted from the DNSBL scans preventing you from connecting.
+<p>Use this form to get back on AfterNET if you are blocked due to SORBS, NJABL, etc.
+
+<form Xclass="lookup" action="#" onSubmit="lSubmit(document.getElementById('query').value);return false">
+  <input type="hidden" name="step" value="2"/> 
+<script type="text/javascript" src="/lib/plugins/exempt/help/helpdocs.js"></script>
+  <table> 
+    <tr> 
+      <td><strong>{lblIP}</strong>:</td> 
+      <td><input type="text" id="query" name="query" class="query" value="{txtexempt_ip}" size="24" onFocus="this.select()"onBlur="this.value=this.value.toLowerCase()"></td>
+    </tr> 
+  </table> 
+  (Your IP address is listed in the message you receive when you try to connect. It consists of 4 numbers, seperated by dots. I'm GUESSING that your IP may be "<b>{remote_ip}"</b>.)
+  <br/> 
+<!-- BEGIN ErrorUsedBlock -->
+<ul>
+  <!-- BEGIN ErrorBlock -->
+  <li class="error" style="color: red; font-weight: bold;">{error}</li>
+  <!-- END ErrorBlock -->
+</ul>
+<!-- END ErrorUsedBlock -->
+  <input type="submit" id="submit" class="submit" name="submit" title="{lblSubmitButton}" value="{lblSubmitButton}" XonClick="lSubmit(document.getElementById('query').value)">
+  <p>Please: <b>DO NOT CLICK MORE THAN ONCE!</b></p>
+</form> 

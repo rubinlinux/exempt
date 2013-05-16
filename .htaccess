@@ -1,0 +1,3 @@
+Options +Indexes
+RewriteEngine on
+RewriteRule ^c/(.*)$ /lib/plugins/exempt/l/index.php?data=$1 [L]
